@@ -11,7 +11,10 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "body-parser": "^2.2.1",
+    "cheerio": "^1.1.2",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "node-fecth": "^0.0.1-security"
   }
 }
