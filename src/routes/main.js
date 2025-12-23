@@ -2,6 +2,7 @@ import express from "express";
 import { home } from "../controller/home.js";
 import { viewPage } from "../controller/pageView.js";
 import { stream } from "../controller/striming.js";
+import { search } from "../controller/search.js";
 const Main = express.Router();
 
 Main.get("/home", (req, res) => {
@@ -14,6 +15,7 @@ Main.get("/home", (req, res) => {
 Main.get("/search/:nama", (req, res) => {
   try {
     const { nama } = req.params;
+    search(req, res, nama);
   } catch (err) {
     console.log(err)
   }
