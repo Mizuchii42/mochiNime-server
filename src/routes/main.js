@@ -3,6 +3,7 @@ import { home } from "../controller/home.js";
 import { viewPage } from "../controller/pageView.js";
 import { stream } from "../controller/striming.js";
 import { search } from "../controller/search.js";
+import { genreSection } from "../controller/genre.js";
 const Main = express.Router();
 
 Main.get("/home", (req, res) => {
@@ -35,6 +36,10 @@ Main.get("/striming/:url", (req, res) => {
   } catch (err) {
     console.log(err);
   }
+})
+
+Main.get("/genre/:slug", (req, res) => {
+  genreSection(req, res);
 })
 
 export default Main;
