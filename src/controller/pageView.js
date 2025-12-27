@@ -102,7 +102,6 @@ async function performScraping(slug) {
   const episodes = [];
   $venser
     .find("div.episodelist > ul > li")
-    .slice(0, 30)
     .each((_, el) => {
       const $link = $(el).find("a");
       if (!$link.length) return;
