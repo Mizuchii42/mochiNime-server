@@ -5,7 +5,35 @@ import { stream } from "../controller/striming.js";
 import { search } from "../controller/search.js";
 import { genreSection } from "../controller/genre.js";
 const Main = express.Router();
+Main.get("/", (req, res) => {
+  res.json({
+    developer: "Mizuchii42",
+    github: "https://github.com/Mizuchii42",
+    docs: [
+      {
+        path: "/home",
+        desc: "mengambil data anime beberapa"
+      },
+      {
+        path: "/search/:name",
+        desc: "untuk mencari anime berdasarkan nama"
+      },
+      {
+        path: "/view/:link",
+        desc: "melihat detail anime dan daftar episode"
+      },
+      {
+        path: "/genre/:id",
+        desc: "memunculkan daftar anime berdasarkan genre"
+      },
+      {
+        path: "/striming/:plink",
+        desc: "untuk menampilkan link striming dari anime yang di pilih"
+      }
+    ]
 
+  })
+})
 Main.get("/home", (req, res) => {
   try {
     home(req, res);
