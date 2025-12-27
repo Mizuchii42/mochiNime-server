@@ -5,7 +5,7 @@ import { stream } from "../controller/striming.js";
 import { search } from "../controller/search.js";
 import { genreSection } from "../controller/genre.js";
 const Main = express.Router();
-Main.get("/", (req, res) => {
+Main.get("/docs", (req, res) => {
   res.json({
     developer: "Mizuchii42",
     github: "https://github.com/Mizuchii42",
